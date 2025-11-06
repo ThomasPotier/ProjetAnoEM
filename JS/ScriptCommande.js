@@ -31,23 +31,23 @@ document.querySelector('button[name="DJF"]').onclick = () => sendClose("DJ");
 
 
 /// ✅ ISOLEMENT
-document.querySelector('button[name="Isolement_ON"]').onclick = () => sendOpen("Isolement");
-document.querySelector('button[name="Isolement_OFF"]').onclick = () => sendClose("Isolement");
+document.querySelector('button[name="Isolement"]').onclick = () => sendOpen("Isolement");
+document.querySelector('button[name="IsolementOFF"]').onclick = () => sendClose("Isolement");
 
 
 /// ✅ CVS
-document.querySelector('button[name="CVS_ON"]').onclick = () => sendOpen("CVS");
-document.querySelector('button[name="CVS_OFF"]').onclick = () => sendClose("CVS");
+document.querySelector('button[name="CVS"]').onclick = () => sendOpen("CVS");
+document.querySelector('button[name="CVSOFF"]').onclick = () => sendClose("CVS");
 
 
 /// ✅ LSGSusp
-document.querySelector('button[name="LSGSusp_ON"]').onclick = () => sendOpen("LSGSusp");
-document.querySelector('button[name="LSGSusp_OFF"]').onclick = () => sendClose("LSGSusp");
+document.querySelector('button[name="LSGSusp"]').onclick = () => sendOpen("LSGSusp");
+document.querySelector('button[name="LSGSuspOFF"]').onclick = () => sendClose("LSGSusp");
 
 
 /// ✅ AutreCab
-document.querySelector('button[name="AutreCab_ON"]').onclick = () => sendOpen("AutreCab");
-document.querySelector('button[name="AutreCab_OFF"]').onclick = () => sendClose("AutreCab");
+document.querySelector('button[name="AutreCab"]').onclick = () => sendOpen("AutreCab");
+document.querySelector('button[name="AutreCabOFF"]').onclick = () => sendClose("AutreCab");
 
 
 /// ✅ ICT (cas particulier)
