@@ -16,12 +16,30 @@ const db = getDatabase(app);
 
 const djImg = document.getElementById("lsDJ");
 
-// Écoute de l'ordre DJ (open/close avec horodatage)
+// DJ
 onValue(ref(db, "commande/DJ"), (snap) => {
   const v = (snap.val() || "").toString();
-  if (v.startsWith("open")) {
-    djImg.style.display = "visible";   // équivalent de "display: active" (qui n'existe pas)
-  } else if (v.startsWith("close")) {
-    djImg.style.display = "none";
-  }
+  const el = document.getElementById("lsDJ");
+  if (v.startsWith("open")) el.style.display = "block";
+  if (v.startsWith("close")) el.style.display = "none";
+});
+
+// Isolement
+onValue(ref(db, "commande/Isolement"), (snap) => {
+  if (snap.val()) document.getElementById("Isolement").style.display = "block";
+});
+
+// CVS
+onValue(ref(db, "commande/CVS"), (snap) => {
+  if (snap.val()) document.getElementById("CVS").style.display = "block";
+});
+
+// LSG Susp
+onValue(ref(db, "commande/LSGSusp"), (snap) => {
+  if (snap.val()) document.getElementById("LSGSusp").style.display = "block";
+});
+
+// Autre Cab
+onValue(ref(db, "commande/AutreCab"), (snap) => {
+  if (snap.val()) document.getElementById("AutreCab").style.display = "block";
 });

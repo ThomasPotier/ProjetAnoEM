@@ -17,10 +17,25 @@ const db = getDatabase(app);
 const btnOpen = document.querySelector('button[name="DJO"]');  // Ouverture DJ
 const btnClose = document.querySelector('button[name="DJF"]'); // Fermeture DJ
 
-btnOpen.addEventListener("click", () => {
-  set(ref(db, "commande/DJ"), "open-" + Date.now());
-});
 
-btnClose.addEventListener("click", () => {
+// DJ
+document.querySelector('button[name="DJO"]').onclick = () =>
+  set(ref(db, "commande/DJ"), "open-" + Date.now());
+document.querySelector('button[name="DJF"]').onclick = () =>
   set(ref(db, "commande/DJ"), "close-" + Date.now());
-});
+
+// Isolement
+document.querySelector('button[name="Isolement"]').onclick = () =>
+  set(ref(db, "commande/Isolement"), "on-" + Date.now());
+
+// CVS
+document.querySelector('button[name="CVS"]').onclick = () =>
+  set(ref(db, "commande/CVS"), "on-" + Date.now());
+
+// LSG Susp
+document.querySelector('button[name="LSGSusp"]').onclick = () =>
+  set(ref(db, "commande/LSGSusp"), "on-" + Date.now());
+
+// Autre Cabine
+document.querySelector('button[name="AutreCab"]').onclick = ()
+  set(ref(db, "commande/AutreCab"), "on-" + Date.now());
