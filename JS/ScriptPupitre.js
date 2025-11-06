@@ -20,7 +20,7 @@ const djImg = document.getElementById("lsDJ");
 onValue(ref(db, "commande/DJ"), (snap) => {
   const v = (snap.val() || "").toString();
   if (v.startsWith("open")) {
-    djImg.style.display = "block";   // équivalent de "display: active" (qui n'existe pas)
+    djImg.style.display = "visible";   // équivalent de "display: active" (qui n'existe pas)
   } else if (v.startsWith("close")) {
     djImg.style.display = "none";
   }
