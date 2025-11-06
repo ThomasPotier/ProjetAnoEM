@@ -26,7 +26,11 @@
   };
 
 
-  // Initialize Firebase
-
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
+
+  // rendre le Firestore utilisable dans ScriptBoutons.js
+  window.db = db;
+  window.doc = doc;
+  window.updateDoc = updateDoc;
+  window.onSnapshot = onSnapshot;
