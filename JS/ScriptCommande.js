@@ -37,5 +37,5 @@ document.querySelector('button[name="LSGSusp"]').onclick = () =>
   set(ref(db, "commande/LSGSusp"), "on-" + Date.now());
 
 // Autre Cabine
-document.querySelector('button[name="AutreCab"]').onclick = ()
+document.querySelector('button[name="AutreCab"]').onclick = () =>
   set(ref(db, "commande/AutreCab"), "on-" + Date.now());
