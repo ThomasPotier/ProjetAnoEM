@@ -24,12 +24,12 @@ header {
 }
 
 main {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .back-button {
@@ -139,3 +139,21 @@ main {
 .div22 { grid-area: 5 / 3 / 6 / 4; display: flex; justify-content: center; align-items: center; height: 150px; width: 150px; background-color: #e8461e;}
 .div23 { grid-area: 5 / 4 / 6 / 5; display: flex; justify-content: center; align-items: center; height: 150px; width: 150px;}
 .div24 { grid-area: 5 / 5 / 6 / 6; display: flex; justify-content: center; align-items: center; height: 150px; width: 150px;}
+
+.tension {
+  display: flex;
+  width: 400px;
+  margin: 10px;
+  text-align: center;
+}
+
+.gauge-svg {
+  width: 100%;
+  height: auto;
+}
+
+.gauge-label {
+  color: black;
+  font-size: 18px;
+  margin-top: 5px;
+}

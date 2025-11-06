@@ -75,5 +75,35 @@ onValue(ref(db, "pupitre"), (snapshot) => {
                 parentDiv.style.backgroundColor = "transparent"; // ou "", selon ton CSS
             }
         }
+
+        // --- Jauge VL(M) ---
+        if (key === "VLM") {
+            const needle = document.getElementById("needle-mono");
+
+            if (data.VLM === "Z") {
+                needle.style.transform = "translateY(80px)";
+            }
+            else if (data.VLM === "J") {
+                needle.style.transform = "translateY(25px)";
+            }
+            else if (data.VLM === "V") {
+                needle.style.transform = "translateY(-60px)";
+            }
+        }
+
+        // --- Jauge VL(C) ---
+        if (key === "VLC") {
+            const needle = document.getElementById("needle-continu");
+
+            if (data.VLC === "Z") {
+                needle.style.transform = "translateY(80px)";
+            }
+            else if (data.VLC === "J") {
+                needle.style.transform = "translateY(25px)";
+            }
+            else if (data.VLC === "V") {
+                needle.style.transform = "translateY(-60px)";
+            }
+        }
     });
 });

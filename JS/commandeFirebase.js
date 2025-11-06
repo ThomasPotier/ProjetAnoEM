@@ -75,3 +75,15 @@ ictButton.addEventListener("click", () => {
     // Envoi de la valeur à Firebase
     set(ref(db, "pupitre/ICT"), value);
 });
+
+// ---------------------------------------
+// 3. Gestion des tensions ligne
+// -------------------------------------
+
+if (btn.name === "UMonoZ") set(ref(db, "pupitre/VLM"), "Z");
+if (btn.name === "UMonoJ") set(ref(db, "pupitre/VLM"), "J");
+if (btn.name === "UMonoV") set(ref(db, "pupitre/VLM"), "V");
+
+if (btn.name === "UContinuZ") set(ref(db, "pupitre/VLC"), "Z");
+if (btn.name === "UContinuJ") set(ref(db, "pupitre/VLC"), "J");
+if (btn.name === "UContinuV") set(ref(db, "pupitre/VLC"), "V");
