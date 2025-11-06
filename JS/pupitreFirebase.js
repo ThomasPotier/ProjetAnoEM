@@ -70,7 +70,7 @@ onValue(ref(db, "pupitre"), (snapshot) => {
             const parentDiv = el.parentElement;   // div20, div21 ou div22
 
             if (data[key]) {
-                parentDiv.style.backgroundColor = "red";
+                parentDiv.style.backgroundColor = "#e8461e";
             } else {
                 parentDiv.style.backgroundColor = "transparent"; // ou "", selon ton CSS
             }
