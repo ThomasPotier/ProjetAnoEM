@@ -65,5 +65,15 @@ onValue(ref(db, "pupitre"), (snapshot) => {
         }
 
         el.style.display = data[key] ? "block" : "none";
+
+        if (["UrgVA", "UrgRS", "UrgKVB"].includes(key)) {
+            const parentDiv = el.parentElement;   // div20, div21 ou div22
+
+            if (data[key]) {
+                parentDiv.style.backgroundColor = "red";
+            } else {
+                parentDiv.style.backgroundColor = "transparent"; // ou "", selon ton CSS
+            }
+        }
     });
 });
