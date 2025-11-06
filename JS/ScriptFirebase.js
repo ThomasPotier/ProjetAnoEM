@@ -1,10 +1,4 @@
-onValue(ref(db, "commande/DJO"), (snapshot) => {
-const val = snapshot.val();
-const el = document.getElementById("lsDJ");
-if (val) {
-el.style.display = "block";
-}
-});
+
 
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
@@ -43,4 +37,12 @@ sendAction("ICT", val);
 sendAction(btn.name);
 }
 });
+});
+
+onValue(ref(db, "commande/DJO"), (snapshot) => {
+const val = snapshot.val();
+const el = document.getElementById("lsDJ");
+if (val) {
+el.style.display = "block";
+}
 });
