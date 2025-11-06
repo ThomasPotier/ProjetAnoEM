@@ -1,6 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
+/// ✅ CONFIG FIREBASE
 const firebaseConfig = {
   apiKey: "AIzaSyDt-8EIGD1cXh5Z5Xwu6mYx6iyJ930sAtA",
   authDomain: "anomalieem-a07d7.firebaseapp.com",
@@ -14,28 +15,43 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
-const btnOpen = document.querySelector('button[name="DJO"]');  // Ouverture DJ
-const btnClose = document.querySelector('button[name="DJF"]'); // Fermeture DJ
+
+/// ✅ Fonction générique comme DJ : open/close
+function sendOpen(name) {
+  set(ref(db, "commande/" + name), "open-" + Date.now());
+}
+
+function sendClose(name) {
+  set(ref(db, "commande/" + name), "close-" + Date.now());
+}
+
+/// ✅ BOUTONS DJ
+document.querySelector('button[name="DJO"]').onclick = () => sendOpen("DJ");
+document.querySelector('button[name="DJF"]').onclick = () => sendClose("DJ");
 
 
-// DJ
-document.querySelector('button[name="DJO"]').onclick = () =>
-  set(ref(db, "commande/DJ"), "open-" + Date.now());
-document.querySelector('button[name="DJF"]').onclick = () =>
-  set(ref(db, "commande/DJ"), "close-" + Date.now());
+/// ✅ ISOLEMENT
+document.querySelector('button[name="Isolement_ON"]').onclick = () => sendOpen("Isolement");
+document.querySelector('button[name="Isolement_OFF"]').onclick = () => sendClose("Isolement");
 
-// Isolement
-document.querySelector('button[name="Isolement"]').onclick = () =>
-  set(ref(db, "commande/Isolement"), "on-" + Date.now());
 
-// CVS
-document.querySelector('button[name="CVS"]').onclick = () =>
-  set(ref(db, "commande/CVS"), "on-" + Date.now());
+/// ✅ CVS
+document.querySelector('button[name="CVS_ON"]').onclick = () => sendOpen("CVS");
+document.querySelector('button[name="CVS_OFF"]').onclick = () => sendClose("CVS");
 
-// LSG Susp
-document.querySelector('button[name="LSGSusp"]').onclick = () =>
-  set(ref(db, "commande/LSGSusp"), "on-" + Date.now());
 
-// Autre Cabine
-document.querySelector('button[name="AutreCab"]').onclick = () =>
-  set(ref(db, "commande/AutreCab"), "on-" + Date.now());
+/// ✅ LSGSusp
+document.querySelector('button[name="LSGSusp_ON"]').onclick = () => sendOpen("LSGSusp");
+document.querySelector('button[name="LSGSusp_OFF"]').onclick = () => sendClose("LSGSusp");
+
+
+/// ✅ AutreCab
+document.querySelector('button[name="AutreCab_ON"]').onclick = () => sendOpen("AutreCab");
+document.querySelector('button[name="AutreCab_OFF"]').onclick = () => sendClose("AutreCab");
+
+
+/// ✅ ICT (cas particulier)
+document.querySelector('button[name="ICT"]').onclick = () => {
+  const val = document.getElementById("pet-select").value;
+  set(ref(db, "commande/ICT"), val);
+};

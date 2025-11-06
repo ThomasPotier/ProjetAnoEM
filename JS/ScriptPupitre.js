@@ -1,6 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
+/// ✅ CONFIG FIREBASE
 const firebaseConfig = {
   apiKey: "AIzaSyDt-8EIGD1cXh5Z5Xwu6mYx6iyJ930sAtA",
   authDomain: "anomalieem-a07d7.firebaseapp.com",
@@ -14,32 +15,38 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
-const djImg = document.getElementById("lsDJ");
 
-// DJ
-onValue(ref(db, "commande/DJ"), (snap) => {
-  const v = (snap.val() || "").toString();
-  const el = document.getElementById("lsDJ");
-  if (v.startsWith("open")) el.style.display = "block";
-  if (v.startsWith("close")) el.style.display = "none";
-});
+/// ✅ Fonction générique pour activer/désactiver un voyant
+function listenTo(name, elementId) {
+  onValue(ref(db, "commande/" + name), (snap) => {
+    const v = snap.val() || "";
+    const el = document.getElementById(elementId);
 
-// Isolement
-onValue(ref(db, "commande/Isolement"), (snap) => {
-  if (snap.val()) document.getElementById("Isolement").style.display = "block";
-});
+    if (!el) return;
 
-// CVS
-onValue(ref(db, "commande/CVS"), (snap) => {
-  if (snap.val()) document.getElementById("CVS").style.display = "block";
-});
+    if (v.startsWith("open")) el.style.display = "block";
+    if (v.startsWith("close")) el.style.display = "none";
+  });
+}
 
-// LSG Susp
-onValue(ref(db, "commande/LSGSusp"), (snap) => {
-  if (snap.val()) document.getElementById("LSGSusp").style.display = "block";
-});
+/// ✅ DJ
+listenTo("DJ", "lsDJ");
 
-// Autre Cab
-onValue(ref(db, "commande/AutreCab"), (snap) => {
-  if (snap.val()) document.getElementById("AutreCab").style.display = "block";
+/// ✅ Isolement
+listenTo("Isolement", "Isolement");
+
+/// ✅ CVS
+listenTo("CVS", "CVS");
+
+/// ✅ LSGSusp
+listenTo("LSGSusp", "LSGSusp");
+
+/// ✅ AutreCab
+listenTo("AutreCab", "AutreCab");
+
+
+/// ✅ ICT (affichage direct)
+onValue(ref(db, "commande/ICT"), snap => {
+  const v = snap.val();
+  if (v !== null) document.getElementById("ICT").textContent = v;
 });
