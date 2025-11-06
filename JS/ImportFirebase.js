@@ -30,20 +30,3 @@
 
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
-
-
-  async function ouvrirDJ() {
-      await updateDoc(doc(db, "commande_moteur", "etat"), {
-          DJ: "open"
-      });
-
-      // écouter Firestore en temps réel
-      onSnapshot(doc(db, "commande_moteur", "etat"), (snapshot) => {
-          const data = snapshot.data();
-
-          if (data.DJ === "open") {
-              document.getElementById("imgDJ").style.display = "block";
-          } else {
-              document.getElementById("imgDJ").style.display = "none";
-          }
-      });
