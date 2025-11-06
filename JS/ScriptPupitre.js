@@ -1,7 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
-/// ✅ CONFIG FIREBASE
 const firebaseConfig = {
   apiKey: "AIzaSyDt-8EIGD1cXh5Z5Xwu6mYx6iyJ930sAtA",
   authDomain: "anomalieem-a07d7.firebaseapp.com",
@@ -15,38 +14,33 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
+// ✅ Fonction générique : ON → affiche, OFF → cache
+function connect(name, id) {
+  const el = document.getElementById(id);
 
-/// ✅ Fonction générique pour activer/désactiver un voyant
-function listenTo(name, elementId) {
-  onValue(ref(db, "commande/" + name), (snap) => {
-    const v = snap.val() || "";
-    const el = document.getElementById(elementId);
-
-    if (!el) return;
-
-    if (v.startsWith("open")) el.style.display = "block";
-    if (v.startsWith("close")) el.style.display = "none";
+  onValue(ref(db, "commande/" + name), snap => {
+    const v = snap.val();
+    if (v === "on") el.style.display = "block";
+    else el.style.display = "none";
   });
 }
 
-/// ✅ DJ
-listenTo("DJ", "lsDJ");
-
-/// ✅ Isolement
-listenTo("Isolement", "Isolement");
-
-/// ✅ CVS
-listenTo("CVS", "CVS");
-
-/// ✅ LSGSusp
-listenTo("LSGSusp", "LSGSusp");
-
-/// ✅ AutreCab
-listenTo("AutreCab", "AutreCab");
-
-
-/// ✅ ICT (affichage direct)
-onValue(ref(db, "commande/ICT"), snap => {
-  const v = snap.val();
-  if (v !== null) document.getElementById("ICT").textContent = v;
-});
+// ✅ Connexions pupitre
+connect("Isolement", "Isolement");
+connect("CVS", "CVS");
+connect("LSGSusp", "LSGSusp");
+connect("AutreCab", "AutreCab");
+connect("Pat", "Pat");
+connect("DfPortes", "DfPortes");
+connect("AutFermDJ", "AutFermDJ");
+connect("TBogS", "TBogS");
+connect("TBogD", "TBogD");
+connect("AlarmeSai", "AlarmeSai");
+connect("DfComAut", "DfComAut");
+connect("DfFrein", "DfFrein");
+connect("DfDessFrein", "DfDessFrein");
+connect("SableAut", "SableAut");
+connect("UrgVA", "UrgVA");
+connect("UrgRS", "UrgRS");
+connect("UrgKVB", "UrgKVB");
+connect("LSI", "LSI");
