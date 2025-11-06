@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+import { getDatabase, ref, get, set } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
 /// ✅ CONFIG FIREBASE
 const firebaseConfig = {
@@ -15,25 +15,34 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
-/// ✅ Fonction générique pour envoyer une action
-function sendAction(name, value = true) {
-  set(ref(db, "commande/" + name), value + "-" + Date.now());
+
+/// ✅ Fonction ON/OFF générique
+async function toggleAction(name) {
+
+  const r = ref(db, "commande/" + name);
+  const snap = await get(r);
+  const current = snap.exists() ? snap.val() : "off";
+
+  const next = current === "on" ? "off" : "on";
+
+  await set(r, next);
+
+  console.log(name, "→", next);
 }
 
-/// ✅ Ajout d’un listener sur TOUS les boutons
+/// ✅ Quand un bouton est cliqué → toggle
 document.querySelectorAll("button[name]").forEach(btn => {
 
   btn.addEventListener("click", () => {
 
-    // Cas spécial pour ICT (avec sélecteur)
     if (btn.name === "ICT") {
+      // ICT = valeur spéciale (pas ON/OFF)
       const val = document.getElementById("pet-select").value;
-      sendAction("ICT", val);
+      set(ref(db, "commande/ICT"), val);
     }
 
-    // Tous les autres boutons
     else {
-      sendAction(btn.name);
+      toggleAction(btn.name);
     }
   });
 });
