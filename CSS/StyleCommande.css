@@ -13,7 +13,7 @@ header {
 }
 
 main {
-    max-width: 900px;
+    display: flex;
     margin: 40px auto;
     padding: 20px;
     background: white;
@@ -46,7 +46,7 @@ main {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 0px;
+  grid-column-gap: 20px;
   grid-row-gap: 0px;
 }
 
@@ -91,4 +91,15 @@ main {
 
 .toggle-btn.off {
     background-color: #e74c3c; /* rouge */
+}
+
+
+/*Gestion de la tension ligne et effort-mètre*/
+
+.tension {
+  display: flex;
+}
+
+.Continue, .Mono {
+  width: 150px;
 }
