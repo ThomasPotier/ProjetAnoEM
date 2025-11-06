@@ -68,7 +68,10 @@ const ictSelect = document.getElementById("comptage-select");
 
 ictButton.addEventListener("click", () => {
     const value = ictSelect.value;
+
+    // Si rien n'est sélectionné, on ne fait rien
     if (value === "") return;
 
+    // Envoi de la valeur à Firebase
     set(ref(db, "pupitre/ICT"), value);
 });
