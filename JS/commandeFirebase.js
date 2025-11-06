@@ -31,6 +31,11 @@ const db = getDatabase(app);
 const buttons = document.querySelectorAll(".toggle-btn");
 
 buttons.forEach(btn => {
+
+  btn.classList.remove("on");
+  btn.classList.add("off");
+  btn.textContent = btn.textContent.replace("ON", "OFF");
+
     const key = btn.getAttribute("name"); // ex: "LSI", "DJO", "CVS"
 
     btn.addEventListener("click", async () => {
