@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Commande - Anomalie Z24500</title>
     <link rel="stylesheet" href="CSS/StyleCommande.css" />
+    <script src="JS/ImportFirebase.js" charset="utf-8"></script>
 </head>
 <body>
     <header>
@@ -13,7 +14,7 @@
 
     <main>
       <div class="picto1">
-        <div class="div1"> <button type="button" name="DJ">Ouverture DJ</button> </div>
+        <div class="div1"> <button type="button" name="DJ" onclick="ouvrirDJ()">Ouverture DJ</button> </div>
         <div class="div2"> <button type="button" name="Isolement">Motrice Isolee</button> </div>
         <div class="div3"> <button type="button" name="CVS">CVS Isolee</button> </div>
         <div class="div4"> <button type="button" name="LSGSusp">Défaut Suspension</button></div>
@@ -54,7 +55,7 @@
         <div class="div23"> </div>
         <div class="div24"> <button type="button" name="LSI">Incendie</button></div>
       </div>
-      
+
       <div class="iv">
         <button type="button" name="IVBloc">Blocage de l'IV sur une vitesse</button>
         <button type="button" name="IVZero">Blocage de l'IV à 0</button>
