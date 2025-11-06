@@ -17,39 +17,32 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
 
+// ✅ Affiche / cache un voyant
 function bind(name, id) {
 const el = document.getElementById(id);
 if (!el) return;
 onValue(ref(db, "commande/" + name), snap => {
-const v = snap.val();
-el.style.display = v === "on" ? "block" : "none";
+el.style.display = snap.val() === "on" ? "block" : "none";
 });
 }
 
 
-bind("Isolement", "Isolement");
-bind("CVS", "CVS");
-bind("LSGSusp", "LSGSusp");
-bind("AutreCab", "AutreCab");
-bind("Pat", "Pat");
-bind("DfPortes", "DfPortes");
-bind("AutFermDJ", "AutFermDJ");
-bind("TBogS", "TBogS");
-bind("TBogD", "TBogD");
-bind("AlarmeSai", "AlarmeSai");
-bind("DfComAut", "DfComAut");
-bind("DfFrein", "DfFrein");
-bind("DfDessFrein", "DfDessFrein");
-bind("SableAut", "SableAut");
-bind("UrgVA", "UrgVA");
-bind("UrgRS", "UrgRS");
-bind("UrgKVB", "UrgKVB");
-bind("LSI", "LSI");
+export function initPupitre() {
+const anomalies = [
+"Isolement", "CVS", "LSGSusp", "AutreCab", "Pat", "DfPortes",
+"AutFermDJ", "TBogS", "TBogD", "AlarmeSai", "DfComAut",
+"DfFrein", "DfDessFrein", "SableAut", "UrgVA", "UrgRS",
+"UrgKVB", "LSI"
+];
 
 
-// ICT
+anomalies.forEach(name => bind(name, name));
+
+
+// ✅ ICT
 onValue(ref(db, "commande/ICT"), snap => {
 const v = snap.val();
 const el = document.getElementById("ICT");
 if (el && v !== null) el.textContent = v;
 });
+}
