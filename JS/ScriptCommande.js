@@ -1,4 +1,4 @@
-<script type="module">
+
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
   import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
@@ -25,4 +25,3 @@
   btnClose.addEventListener("click", () => {
     set(ref(db, "commande/DJ"), "close-" + Date.now());
   });
-</script>
