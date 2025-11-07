@@ -112,7 +112,7 @@ main {
 input[type="range"][orient="vertical"] {
     writing-mode: bt-lr;
     -webkit-appearance: slider-vertical;
-    height: 250px;
+    height: 500px;
     margin-right: 25px;
 }
 
@@ -120,5 +120,28 @@ input[type="range"][orient="vertical"] {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 250px;   /* même hauteur que le slider */
+    height: 500px;   /* même hauteur que le slider */
+}
+
+.t-btn {
+    width: 100px;
+    padding: 5px 0;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.t-vert {
+    background-color: #3cb043;
+    color: white;
+}
+
+.t-jaune {
+    background-color: #ffcc00;
+    color: black;
+}
+
+.t-rouge {
+    background-color: #d9534f;
+    color: white;
 }
