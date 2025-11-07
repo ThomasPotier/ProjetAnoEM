@@ -145,8 +145,6 @@ document.querySelector('button[name="UMonoZ"]').addEventListener("click", () => 
 //     OPTION B : seulement au relâchement
 // -------------------------------------------------
 
-import { set, ref } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
-
 // --- Fonction d'envoi ---
 function envoyerFirebaseTension() {
     // Tension Mono
