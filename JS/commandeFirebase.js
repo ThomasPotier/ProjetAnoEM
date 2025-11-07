@@ -85,28 +85,56 @@ ictButton.addEventListener("click", () => {
 const sliderContinue = document.getElementById("tensionContinue");
 const sliderMono = document.getElementById("tensionMono");
 
-// Boutons tension continue
+// Fonction d'exclusivité
+function exclusiviteTension(source) {
+    if (source === "continue") {
+        if (sliderContinue.value > 0) {
+            sliderMono.value = 0;
+        }
+    } else if (source === "mono") {
+        if (sliderMono.value > 0) {
+            sliderContinue.value = 0;
+        }
+    }
+}
+
+// --- Sliders : appliquer l'exclusivité en direct ---
+sliderContinue.addEventListener("input", () => {
+    exclusiviteTension("continue");
+});
+
+sliderMono.addEventListener("input", () => {
+    exclusiviteTension("mono");
+});
+
+// --- Boutons Tension Continue ---
 document.querySelector('button[name="UContinuV"]').addEventListener("click", () => {
-    sliderContinue.value = 100;   // position max → vert
+    sliderContinue.value = 100;
+    exclusiviteTension("continue");
 });
 
 document.querySelector('button[name="UContinuJ"]').addEventListener("click", () => {
-    sliderContinue.value = 50;    // position médiane → jaune
+    sliderContinue.value = 50;
+    exclusiviteTension("continue");
 });
 
 document.querySelector('button[name="UContinuZ"]').addEventListener("click", () => {
-    sliderContinue.value = 0;     // zéro volt
+    sliderContinue.value = 0;
+    // pas besoin d'exclusivité quand c’est 0
 });
 
-// Boutons tension alternatif (mono)
+// --- Boutons Tension Mono ---
 document.querySelector('button[name="UMonoV"]').addEventListener("click", () => {
     sliderMono.value = 100;
+    exclusiviteTension("mono");
 });
 
 document.querySelector('button[name="UMonoJ"]').addEventListener("click", () => {
     sliderMono.value = 50;
+    exclusiviteTension("mono");
 });
 
 document.querySelector('button[name="UMonoZ"]').addEventListener("click", () => {
     sliderMono.value = 0;
+    // pas besoin d'exclusivité quand c’est 0
 });
