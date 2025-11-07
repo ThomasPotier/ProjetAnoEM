@@ -62,18 +62,24 @@
       </div>
 
       <div class="tension">
-        <input type="range" id="tensionContinue" name="SliderContinue" min="0" max="100" value="90" step="10" orient="vertical"/>
-        <div class="Continue">
-          <button type="button" name="UContinuV">Tension Ligne Continue en Vert</button>
-          <button type="button" name="UContinuJ">Tention Ligne Continue en Jaune</button>
-          <button type="button" name="UContinuZ">Tension Ligne Continue à 0</button>
+        <!-- Tension Mono -->
+        <div class="tension-colonne">
+          <input type="range" id="tensionMono" name="SliderMono" min="0" max="100" value="90" step="10" orient="vertical"/>
+          <div class="tension-boutons">
+            <button type="button" name="UMonoV">Tension Ligne Alternatif en Vert</button>
+            <button type="button" name="UMonoJ">Tention Ligne Alternatif en Jaune</button>
+            <button type="button" name="UMonoZ">Tension Ligne Alternatif à 0</button>
+          </div>
         </div>
 
-        <input type="range" id="tensionMono" name="SliderMono" min="0" max="100" value="90" step="10" orient="vertical"/>
-        <div class="Mono">
-          <button type="button" name="UMonoV">Tension Ligne Alternatif en Vert</button>
-          <button type="button" name="UMonoJ">Tention Ligne Alternatif en Jaune</button>
-          <button type="button" name="UMonoZ">Tension Ligne Alternatif à 0</button>
+        <!--Tension Continue-->
+        <div class="tension-colonne">
+          <input type="range" id="tensionContinue" name="SliderContinue" min="0" max="100" value="90" step="10" orient="vertical"/>
+          <div class="tension-boutons">
+            <button type="button" name="UContinuV">Tension Ligne Continue en Vert</button>
+            <button type="button" name="UContinuJ">Tention Ligne Continue en Jaune</button>
+            <button type="button" name="UContinuZ">Tension Ligne Continue à 0</button>
+          </div>
         </div>
       </div>
 

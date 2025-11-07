@@ -98,8 +98,27 @@ main {
 
 .tension {
   display: flex;
+  gap: 50px;
+  margin-top: 40px;
 }
 
-.Continue, .Mono {
-  width: 150px;
+.tension-colonne {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+input[type="range"][orient="vertical"] {
+    writing-mode: bt-lr;
+    -webkit-appearance: slider-vertical;
+    height: 250px;
+    margin-right: 25px;
+}
+
+.tension-boutons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px;   /* même hauteur que le slider */
 }
