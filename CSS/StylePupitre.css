@@ -173,19 +173,19 @@ main {
     overflow: hidden;
 }
 
+.jauge-label {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
 .jauge-barre {
     position: absolute;
     bottom: 0;
     width: 100%;
     background-color: rgba(0,0,0,0.25); /* ombre assombrissante */
     height: 0%; /* sera mis à jour selon la valeur */
-}
-
-.jauge-label {
-    margin-top: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
 }
 
 .fleche {
