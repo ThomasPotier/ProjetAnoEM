@@ -90,10 +90,4 @@ onValue(ref(db, "pupitre"), (snapshot) => {
         jauge.style.height = (100 - data.UContinue) + "%";
     }
 
-    // --- Gestion Effort-mètre (plus tard si tu veux) ---
-    if (data.Effort !== undefined) {
-        const jauge = document.getElementById("jaugeEffort");
-        jauge.style.height = (100 - data.Effort) + "%";
-    }
-
 });
