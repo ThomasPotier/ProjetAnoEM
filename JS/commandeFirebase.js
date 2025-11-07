@@ -75,3 +75,38 @@ ictButton.addEventListener("click", () => {
     // Envoi de la valeur à Firebase
     set(ref(db, "pupitre/ICT"), value);
 });
+
+
+//-------------------------------
+// 4. Gestion de la tension Ligne
+//-------------------------------
+
+// Sliders
+const sliderContinue = document.getElementById("tensionContinue");
+const sliderMono = document.getElementById("tensionMono");
+
+// Boutons tension continue
+document.querySelector('button[name="UContinuV"]').addEventListener("click", () => {
+    sliderContinue.value = 100;   // position max → vert
+});
+
+document.querySelector('button[name="UContinuJ"]').addEventListener("click", () => {
+    sliderContinue.value = 50;    // position médiane → jaune
+});
+
+document.querySelector('button[name="UContinuZ"]').addEventListener("click", () => {
+    sliderContinue.value = 0;     // zéro volt
+});
+
+// Boutons tension alternatif (mono)
+document.querySelector('button[name="UMonoV"]').addEventListener("click", () => {
+    sliderMono.value = 100;
+});
+
+document.querySelector('button[name="UMonoJ"]').addEventListener("click", () => {
+    sliderMono.value = 50;
+});
+
+document.querySelector('button[name="UMonoZ"]').addEventListener("click", () => {
+    sliderMono.value = 0;
+});
