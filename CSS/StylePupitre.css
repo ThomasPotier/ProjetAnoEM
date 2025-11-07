@@ -187,3 +187,15 @@ main {
     font-weight: bold;
     color: white;
 }
+
+.fleche {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 18px solid white;  /* flèche blanche */
+}
