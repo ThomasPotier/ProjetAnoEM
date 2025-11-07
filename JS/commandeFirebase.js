@@ -138,3 +138,69 @@ document.querySelector('button[name="UMonoZ"]').addEventListener("click", () => 
     sliderMono.value = 0;
     // pas besoin d'exclusivité quand c’est 0
 });
+
+// -------------------------------------------------
+// 4. Envoi Firebase des jauges Mono / Continue
+//     OPTION A : valeur brute
+//     OPTION B : seulement au relâchement
+// -------------------------------------------------
+
+import { set, ref } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+// --- Fonction d'envoi ---
+function envoyerFirebaseTension() {
+    // Tension Mono
+    set(ref(db, "pupitre/UMono"), Number(sliderMono.value));
+
+    // Tension Continue
+    set(ref(db, "pupitre/UContinue"), Number(sliderContinue.value));
+}
+
+// --- RELÂCHEMENT des sliders ---
+sliderMono.addEventListener("change", () => {
+    exclusiviteTension("mono");
+    envoyerFirebaseTension();
+});
+
+sliderContinue.addEventListener("change", () => {
+    exclusiviteTension("continue");
+    envoyerFirebaseTension();
+});
+
+// --- Boutons Mono ---
+document.querySelector('button[name="UMonoV"]').addEventListener("click", () => {
+    sliderMono.value = 100;
+    exclusiviteTension("mono");
+    envoyerFirebaseTension();
+});
+
+document.querySelector('button[name="UMonoJ"]').addEventListener("click", () => {
+    sliderMono.value = 50;
+    exclusiviteTension("mono");
+    envoyerFirebaseTension();
+});
+
+document.querySelector('button[name="UMonoZ"]').addEventListener("click", () => {
+    sliderMono.value = 0;
+    exclusiviteTension("mono");
+    envoyerFirebaseTension();
+});
+
+// --- Boutons Continue ---
+document.querySelector('button[name="UContinuV"]').addEventListener("click", () => {
+    sliderContinue.value = 100;
+    exclusiviteTension("continue");
+    envoyerFirebaseTension();
+});
+
+document.querySelector('button[name="UContinuJ"]').addEventListener("click", () => {
+    sliderContinue.value = 50;
+    exclusiviteTension("continue");
+    envoyerFirebaseTension();
+});
+
+document.querySelector('button[name="UContinuZ"]').addEventListener("click", () => {
+    sliderContinue.value = 0;
+    exclusiviteTension("continue");
+    envoyerFirebaseTension();
+});

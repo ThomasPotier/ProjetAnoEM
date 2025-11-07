@@ -77,4 +77,23 @@ onValue(ref(db, "pupitre"), (snapshot) => {
         }
 
     });
+
+    //Gestion de la tension Ligne
+
+    if (data.UMono !== undefined) {
+    const jauge = document.getElementById("jaugeMono");
+    jauge.style.height = (100 - data.UMono) + "%";
+    }
+
+    if (data.UContinue !== undefined) {
+        const jauge = document.getElementById("jaugeContinue");
+        jauge.style.height = (100 - data.UContinue) + "%";
+    }
+
+    // --- Gestion Effort-mètre (plus tard si tu veux) ---
+    if (data.Effort !== undefined) {
+        const jauge = document.getElementById("jaugeEffort");
+        jauge.style.height = (100 - data.Effort) + "%";
+    }
+
 });

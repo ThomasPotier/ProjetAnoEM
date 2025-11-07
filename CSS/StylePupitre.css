@@ -139,3 +139,51 @@ main {
 .div22 { grid-area: 5 / 3 / 6 / 4; display: flex; justify-content: center; align-items: center; height: 150px; width: 150px; background-color: #e8461e;}
 .div23 { grid-area: 5 / 4 / 6 / 5; display: flex; justify-content: center; align-items: center; height: 150px; width: 150px;}
 .div24 { grid-area: 5 / 5 / 6 / 6; display: flex; justify-content: center; align-items: center; height: 150px; width: 150px;}
+
+
+/*Gestion de la tension ligne*/
+
+.tension {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.jauge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.jauge-contenu {
+    width: 60px;
+    height: 500px;
+    background: linear-gradient(
+        to top,
+        #d9534f 0%,    /* Rouge */
+        #d9534f 40%,
+        #ffcc00 40%,   /* Jaune */
+        #ffcc00 70%,
+        #3cb043 70%,   /* Vert */
+        #3cb043 100%
+    );
+    border: 3px solid #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.jauge-barre {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.25); /* ombre assombrissante */
+    height: 0%; /* sera mis à jour selon la valeur */
+}
+
+.jauge-label {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
