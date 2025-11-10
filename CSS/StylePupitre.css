@@ -180,11 +180,19 @@ main {
     overflow: hidden;
 }
 
+.jauge-contenu-eff {
+    width: 60px;
+    height: 500px;
+    border: 3px solid #000;
+    position: relative;
+    overflow: hidden;
+}
+
 .jauge-barre {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: rgba(0,0,0,0.3);
+    /*background-color: rgba(0,0,0,0.3);*/
     height: 8%; /* <- on modifie ça en JS */
     z-index: 1;
 }
@@ -197,5 +205,14 @@ main {
     border-left: 14px solid transparent;
     border-right: 14px solid transparent;
     border-top: 20px solid white;
+    z-index: 10;
+}
+
+.traitrouge {
+    position: absolute;
+    transform: rotate(270deg) translateX(-50%);
+    width  : 10px;
+    height : 65px;
+    background : red;
     z-index: 10;
 }
