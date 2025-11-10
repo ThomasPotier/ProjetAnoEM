@@ -192,7 +192,7 @@ main {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: rgba(0,0,0,0.3);
+    /*background-color: rgba(0,0,0,0.3);*/
     height: 8%; /* <- on modifie ça en JS */
     z-index: 1;
 }
@@ -201,7 +201,7 @@ main {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: rgba(0,0,0,0.3);
+    /*background-color: rgba(0,0,0,0.3);*/
     height: 50%; /* <- on modifie ça en JS */
     z-index: 2;
 }
