@@ -154,7 +154,7 @@ function envoyerFirebaseTension() {
     set(ref(db, "pupitre/UContinue"), Number(sliderContinue.value));
 
     // Effortmètre
-    set(ref(db, "pupitre/EffMetre"), Number(sliderContinue.value));
+    set(ref(db, "pupitre/EffMetre"), Number(sliderEffortmetre.value));
 }
 
 // --- RELÂCHEMENT des sliders ---
