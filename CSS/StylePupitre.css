@@ -191,12 +191,11 @@ main {
 
 .fleche {
     position: absolute;
-    left: 50%;
     transform: rotate(270deg) translateX(-50%);
     width: 0;
     height: 0;
-    border-left: 12px solid transparent;
-    border-right: 12px solid transparent;
-    border-top: 18px solid white;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top: 20px solid white;
     z-index: 10;
 }
