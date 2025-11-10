@@ -23,7 +23,7 @@ for (let value = 0; value <= 180; value += 10) {
   if (isMajor) {
     const label = document.createElement("div");
     label.textContent = value;
-    label.style.transform = `translate(50%,-250%) rotate(${angleLab}deg)`;
+    label.style.transform = `translate(50%,-1000%) rotate(${angleLab}deg)`;
     labels.appendChild(label);
   }
 }
