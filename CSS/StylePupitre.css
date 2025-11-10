@@ -165,7 +165,7 @@ main {
 
 .jauge-contenu {
     width: 60px;
-    height: 250px;
+    height: 500px;
     background: linear-gradient(
         to top,
         #d9534f 0%,
@@ -185,7 +185,9 @@ main {
     bottom: 0;                   /* ✅ OBLIGATOIRE */
     width: 100%;
     background-color: rgba(0,0,0,0.3);
-    height: 0%;                  /* sera mis à jour */
+    height: 100%;                  /* sera mis à jour */
+    transform-origin: bottom;  /* ✅ on part du bas */
+    transform: scaleY(0);      /* ✅ valeur au repos */
 }
 
 .fleche {
