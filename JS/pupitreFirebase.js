@@ -82,12 +82,12 @@ onValue(ref(db, "pupitre"), (snapshot) => {
 
     if (data.UMono !== undefined) {
       const jaugeMono = document.getElementById("jaugeMono");
-      jaugeMono.style.height = (8 + data.UMono) + "%";
+      jaugeMono.style.height = (0 + data.UMono) + "%";
     }
 
     if (data.UContinue !== undefined) {
       const jaugeContinue = document.getElementById("jaugeContinue");
-      jaugeContinue.style.height = (8 + data.UContinue) + "%";
+      jaugeContinue.style.height = (0 + data.UContinue) + "%";
     }
 
 });
