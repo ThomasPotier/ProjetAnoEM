@@ -6,10 +6,10 @@ const start = -105;
 const end = 105;
 
 // Graduations tous les 10 km/h
-for (let value = 180; value >= 0; value -= 10) {
+for (let value = 0; value <= 180; value += 10) {
   const ratio = value / 180;
   const angle = start + ratio * (end - start);
-  const angleLab = 180 - (start + ratio * (end - start));
+  const angleLab = angle - 30;
 
   // Ticks
   const tick = document.createElement("div");
