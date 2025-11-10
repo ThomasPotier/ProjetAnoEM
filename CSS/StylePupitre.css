@@ -156,13 +156,13 @@ main {
   position:absolute;
   left:50%;
   top:50%;
-  background:#c6ff00;
+  background:white;
   transform-origin:center -165px;
 }
 
 .labels div {
   position:absolute;
-  color:#c6ff00;
+  color:white;
   font-family:Arial, sans-serif;
   font-size:26px;
   left:50%;
@@ -174,13 +174,12 @@ main {
   position:absolute;
   width:6px;
   height:160px;
-  background:#d4ff00;
+  background:white;
   left:50%;
   top:50%;
   transform-origin:bottom;
   transform:rotate(0deg);
   border-radius:6px;
-  box-shadow:0 0 12px #d4ff00;
 }
 
 .hub {
@@ -192,12 +191,11 @@ main {
   left:50%;
   top:50%;
   transform:translate(-50%,-50%);
-  box-shadow:0 0 10px #c6ff00;
 }
 
 .unit {
   position:absolute;
-  color:#c6ff00;
+  color:white;
   font-family:Arial, sans-serif;
   font-size:22px;
   left:50%;
