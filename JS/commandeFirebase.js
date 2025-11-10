@@ -140,6 +140,22 @@ document.querySelector('button[name="UMonoZ"]').addEventListener("click", () => 
     // pas besoin d'exclusivité quand c’est 0
 });
 
+// --- Boutons EffortMEtre ---
+document.querySelector('button[name="EffTraction"]').addEventListener("click", () => {
+    sliderMono.value = 100;
+    exclusiviteTension("mono");
+});
+
+document.querySelector('button[name="EffZero"]').addEventListener("click", () => {
+    sliderMono.value = 50;
+    exclusiviteTension("mono");
+});
+
+document.querySelector('button[name="EffFrein"]').addEventListener("click", () => {
+    sliderMono.value = 2;
+    // pas besoin d'exclusivité quand c’est 0
+});
+
 // -------------------------------------------------
 // 4. Envoi Firebase des jauges Mono / Continue
 //     OPTION A : valeur brute
