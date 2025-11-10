@@ -90,4 +90,9 @@ onValue(ref(db, "pupitre"), (snapshot) => {
       jaugeContinue.style.height = (0 + data.UContinue) + "%";
     }
 
+    if (data.EffMetre !== undefined) {
+      const jaugeEffort = document.getElementById("jaugeEffort");
+      jaugeEffort.style.height = (0 + data.UContinue) + "%";
+    }
+
 });
