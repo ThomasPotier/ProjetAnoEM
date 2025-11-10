@@ -92,7 +92,7 @@ onValue(ref(db, "pupitre"), (snapshot) => {
 
     if (data.EffMetre !== undefined) {
       const jaugeEffort = document.getElementById("jaugeEffort");
-      jaugeEffort.style.height = (0 + data.UContinue) + "%";
+      jaugeEffort.style.height = (0 + data.EffMetre) + "%";
     }
 
 });
