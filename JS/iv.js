@@ -8,7 +8,7 @@ const end = 105;
 // Graduations tous les 10 km/h
 for (let value = 0; value <= 180; value += 10) {
   const ratio = value / 180;
-  const angle = start + ratio * (end - start);
+  const angle = 180 - (start + ratio * (end - start));
 
   // Ticks
   const tick = document.createElement("div");
@@ -22,7 +22,7 @@ for (let value = 0; value <= 180; value += 10) {
   if (isMajor) {
     const label = document.createElement("div");
     label.textContent = value;
-    label.style.transform = `translate(-50%,-50%) rotate(${angle}deg)`;
+    label.style.transform = `translate(50%,50%) rotate(${angle}deg)`;
     labels.appendChild(label);
   }
 }
