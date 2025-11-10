@@ -179,7 +179,7 @@ document.querySelector('button[name="UMonoJ"]').addEventListener("click", () => 
 });
 
 document.querySelector('button[name="UMonoZ"]').addEventListener("click", () => {
-    sliderMono.value = 10;
+    sliderMono.value = 8;
     exclusiviteTension("mono");
     envoyerFirebaseTension();
 });
@@ -198,7 +198,7 @@ document.querySelector('button[name="UContinuJ"]').addEventListener("click", () 
 });
 
 document.querySelector('button[name="UContinuZ"]').addEventListener("click", () => {
-    sliderContinue.value = 10;
+    sliderContinue.value = 8;
     exclusiviteTension("continue");
     envoyerFirebaseTension();
 });

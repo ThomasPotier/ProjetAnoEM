@@ -168,7 +168,7 @@ main {
     height: 500px;
     background: linear-gradient(
         to top,
-        #d9534f 10%,
+        #d9534f 8%,
         #d9534f 40%,
         #ffcc00 40%,
         #ffcc00 70%,
@@ -185,7 +185,7 @@ main {
     bottom: 0;
     width: 100%;
     background-color: rgba(0,0,0,0.3);
-    height: 10%; /* <- on modifie ça en JS */
+    height: 8%; /* <- on modifie ça en JS */
     z-index: 1;
 }
 
