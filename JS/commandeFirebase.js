@@ -202,3 +202,19 @@ document.querySelector('button[name="UContinuZ"]').addEventListener("click", () 
     exclusiviteTension("continue");
     envoyerFirebaseTension();
 });
+
+// --- Boutons EffortMetre ---
+document.querySelector('button[name="EffTraction"]').addEventListener("click", () => {
+    sliderContinue.value = 100;
+    envoyerFirebaseTension();
+});
+
+document.querySelector('button[name="EffZero"]').addEventListener("click", () => {
+    sliderContinue.value = 0;
+    envoyerFirebaseTension();
+});
+
+document.querySelector('button[name="EffFrein"]').addEventListener("click", () => {
+    sliderContinue.value = -100;
+    envoyerFirebaseTension();
+});
