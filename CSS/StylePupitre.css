@@ -152,6 +152,13 @@ main {
   box-shadow:0 0 20px #000 inset;
 }
 
+.ticks {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform:rotate(180deg);
+}
+
 .ticks div {
   position:absolute;
   left:50%;
