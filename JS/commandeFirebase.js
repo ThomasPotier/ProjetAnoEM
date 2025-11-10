@@ -152,6 +152,9 @@ function envoyerFirebaseTension() {
 
     // Tension Continue
     set(ref(db, "pupitre/UContinue"), Number(sliderContinue.value));
+
+    // Effortmètre
+    set(ref(db, "pupitre/EffMetre"), Number(sliderContinue.value));
 }
 
 // --- RELÂCHEMENT des sliders ---
@@ -162,6 +165,10 @@ sliderMono.addEventListener("change", () => {
 
 sliderContinue.addEventListener("change", () => {
     exclusiviteTension("continue");
+    envoyerFirebaseTension();
+});
+
+sliderEffortmetre.addEventListener("change", () => {
     envoyerFirebaseTension();
 });
 
@@ -205,16 +212,16 @@ document.querySelector('button[name="UContinuZ"]').addEventListener("click", () 
 
 // --- Boutons EffortMetre ---
 document.querySelector('button[name="EffTraction"]').addEventListener("click", () => {
-    sliderContinue.value = 100;
+    sliderEffortmetre.value = 100;
     envoyerFirebaseTension();
 });
 
 document.querySelector('button[name="EffZero"]').addEventListener("click", () => {
-    sliderContinue.value = 0;
+    sliderEffortmetre.value = 0;
     envoyerFirebaseTension();
 });
 
 document.querySelector('button[name="EffFrein"]').addEventListener("click", () => {
-    sliderContinue.value = -100;
+    sliderEffortmetre.value = -100;
     envoyerFirebaseTension();
 });
