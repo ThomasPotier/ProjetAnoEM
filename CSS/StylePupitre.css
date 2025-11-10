@@ -155,7 +155,7 @@ main {
 .ticks {
   position: absolute;
   left: 50%;
-  top: 15%;
+  top: 17%;
   transform:rotate(180deg);
 }
 
@@ -164,7 +164,7 @@ main {
   left:50%;
   top:50%;
   background:white;
-  transform-origin:center -140px;
+  transform-origin:center -130px;
 }
 
 .labels {
