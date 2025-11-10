@@ -176,23 +176,21 @@ main {
         #3cb043 100%
     );
     border: 3px solid #000;
-    position: relative;         /* ✅ IMPORTANT */
+    position: relative;
     overflow: hidden;
 }
 
 .jauge-barre {
-    position: absolute;          /* ✅ OBLIGATOIRE */
-    bottom: 0;                   /* ✅ OBLIGATOIRE */
+    position: absolute;
+    bottom: 0;
     width: 100%;
     background-color: rgba(0,0,0,0.3);
-    height: 100%;                  /* sera mis à jour */
-    transform-origin: bottom;  /* ✅ on part du bas */
-    transform: scaleY(0);      /* ✅ valeur au repos */
+    height: 0%; /* <- on modifie ça en JS */
 }
 
 .fleche {
-    position: absolute;          /* ✅ OBLIGATOIRE */
-    bottom: 0;
+    position: absolute;
+    bottom: 0; /* <- collée au bas de la barre noire */
     left: 50%;
     transform: translateX(-50%);
     width: 0;
