@@ -164,14 +164,14 @@ main {
   left:50%;
   top:50%;
   background:white;
-  transform-origin:center -165px;
+  transform-origin:center -140px;
 }
 
 .labels {
   transform: rotate(180deg);
   position: absolute;
   left: 50%;
-  top: 15%;
+  top: 20%;
 }
 
 .labels div {
