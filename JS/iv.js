@@ -9,7 +9,7 @@ const end = 105;
 for (let value = 0; value <= 180; value += 10) {
   const ratio = value / 180;
   const angle = start + ratio * (end - start);
-  const angleLab = angle - 30;
+  const angleLab = angle + 30;
 
   // Ticks
   const tick = document.createElement("div");
