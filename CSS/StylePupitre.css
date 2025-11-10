@@ -191,7 +191,7 @@ main {
 
 .fleche {
     position: absolute;
-    bottom: 0; /* <- collée au bas de la barre noire */
+    /*bottom: 0; /* <- collée au bas de la barre noire */
     left: 50%;
     transform: translateX(-50%);
     width: 0;
