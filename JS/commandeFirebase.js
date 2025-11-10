@@ -84,6 +84,7 @@ ictButton.addEventListener("click", () => {
 // Sliders
 const sliderContinue = document.getElementById("tensionContinue");
 const sliderMono = document.getElementById("tensionMono");
+const sliderEffortmetre = document.getElementById("effortmetre");
 
 // Fonction d'exclusivité
 function exclusiviteTension(source) {
