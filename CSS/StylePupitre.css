@@ -191,8 +191,8 @@ main {
   background:white;
   left:50%;
   top:50%;
-  transform-origin:bottom;
-  transform:rotate(0deg);
+  transform-origin:top;
+  transform:rotate(73.5deg);
   border-radius:6px;
 }
 
