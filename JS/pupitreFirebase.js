@@ -81,13 +81,13 @@ onValue(ref(db, "pupitre"), (snapshot) => {
     //Gestion de la tension Ligne
 
     if (data.UMono !== undefined) {
-    const jauge = document.getElementById("jaugeMono");
-    jauge.style.height = (100 - data.UMono) + "%";
+    const jaugeMono = document.getElementById("jaugeMono");
+    jaugeMono.style.height = (100 - data.UMono) + "%";
     }
 
     if (data.UContinue !== undefined) {
-        const jauge = document.getElementById("jaugeContinue");
-        jauge.style.height = (100 - data.UContinue) + "%";
+        const jaugeContinue = document.getElementById("jaugeContinue");
+        jaugeContinue.style.height = (100 - data.UContinue) + "%";
     }
 
 });

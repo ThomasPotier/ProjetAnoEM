@@ -156,23 +156,6 @@ main {
     align-items: center;
 }
 
-.jauge-contenu {
-    width: 60px;
-    height: 500px;
-    background: linear-gradient(
-        to top,
-        #d9534f 0%,    /* Rouge */
-        #d9534f 40%,
-        #ffcc00 40%,   /* Jaune */
-        #ffcc00 70%,
-        #3cb043 70%,   /* Vert */
-        #3cb043 100%
-    );
-    border: 3px solid #000;
-    position: relative;
-    overflow: hidden;
-}
-
 .jauge-label {
     margin-top: 10px;
     font-size: 20px;
@@ -180,16 +163,33 @@ main {
     color: white;
 }
 
+.jauge-contenu {
+    width: 60px;
+    height: 250px;
+    background: linear-gradient(
+        to top,
+        #d9534f 0%,
+        #d9534f 40%,
+        #ffcc00 40%,
+        #ffcc00 70%,
+        #3cb043 70%,
+        #3cb043 100%
+    );
+    border: 3px solid #000;
+    position: relative;         /* ✅ IMPORTANT */
+    overflow: hidden;
+}
+
 .jauge-barre {
-    position: absolute;
-    bottom: 0;
+    position: absolute;          /* ✅ OBLIGATOIRE */
+    bottom: 0;                   /* ✅ OBLIGATOIRE */
     width: 100%;
-    background-color: rgba(0,0,0,0.25); /* ombre assombrissante */
-    height: 0%; /* sera mis à jour selon la valeur */
+    background-color: rgba(0,0,0,0.3);
+    height: 0%;                  /* sera mis à jour */
 }
 
 .fleche {
-    position: absolute;
+    position: absolute;          /* ✅ OBLIGATOIRE */
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -197,5 +197,5 @@ main {
     height: 0;
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
-    border-top: 18px solid white;  /* flèche blanche */
+    border-top: 18px solid white;
 }
