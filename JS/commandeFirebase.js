@@ -218,11 +218,11 @@ document.querySelector('button[name="EffTraction"]').addEventListener("click", (
 });
 
 document.querySelector('button[name="EffZero"]').addEventListener("click", () => {
-    sliderEffortmetre.value = 0;
+    sliderEffortmetre.value = 50;
     envoyerFirebaseTension();
 });
 
 document.querySelector('button[name="EffFrein"]').addEventListener("click", () => {
-    sliderEffortmetre.value = -100;
+    sliderEffortmetre.value = 2;
     envoyerFirebaseTension();
 });
