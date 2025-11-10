@@ -1,7 +1,28 @@
-const ticksContainer = document.querySelector(".ticks");
-for(let i=0; i<=180; i+=10){
+const ticks = document.querySelector(".ticks");
+const labels = document.querySelector(".labels");
+
+// Cadran réel: environ -105° à +105°
+const start = -105;
+const end = 105;
+
+// Graduations tous les 10 km/h
+for (let value = 0; value <= 180; value += 10) {
+  const ratio = value / 180;
+  const angle = start + ratio * (end - start);
+
+  // Ticks
   const tick = document.createElement("div");
-  tick.style.transform = `translate(-50%, -50%) rotate(${i - 90}deg)`;
-  tick.style.height = i % 20 === 0 ? "28px" : "18px";
-  ticksContainer.appendChild(tick);
+  const isMajor = value % 20 === 0;
+  tick.style.width = isMajor ? "6px" : "3px";
+  tick.style.height = isMajor ? "28px" : "18px";
+  tick.style.transform = `translate(-50%,-50%) rotate(${angle}deg)`;
+  ticks.appendChild(tick);
+
+  // Labels (tous les 20)
+  if (isMajor) {
+    const label = document.createElement("div");
+    label.textContent = value;
+    label.style.transform = `translate(-50%,-50%) rotate(${angle}deg)`;
+    labels.appendChild(label);
+  }
 }
