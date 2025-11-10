@@ -185,7 +185,7 @@ main {
     bottom: 0;
     width: 100%;
     background-color: rgba(0,0,0,0.3);
-    height: 0%; /* <- on modifie ça en JS */
+    height: 10%; /* <- on modifie ça en JS */
     z-index: 1;
 }
 
