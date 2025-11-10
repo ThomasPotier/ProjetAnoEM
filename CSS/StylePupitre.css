@@ -197,6 +197,15 @@ main {
     z-index: 1;
 }
 
+.jauge-barre-eff {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+    height: 50%; /* <- on modifie ça en JS */
+    z-index: 1;
+}
+
 .fleche {
     position: absolute;
     transform: rotate(270deg) translateX(-50%);
