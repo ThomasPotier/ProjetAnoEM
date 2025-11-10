@@ -143,12 +143,10 @@ document.querySelector('button[name="UMonoZ"]').addEventListener("click", () => 
 // --- Boutons EffortMEtre ---
 document.querySelector('button[name="EffTraction"]').addEventListener("click", () => {
     sliderEffortmetre.value = 100;
-    exclusiviteTension("mono");
 });
 
 document.querySelector('button[name="EffZero"]').addEventListener("click", () => {
     sliderEffortmetre.value = 50;
-    exclusiviteTension("mono");
 });
 
 document.querySelector('button[name="EffFrein"]').addEventListener("click", () => {
