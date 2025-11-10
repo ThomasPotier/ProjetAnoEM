@@ -167,6 +167,13 @@ main {
   transform-origin:center -165px;
 }
 
+.labels {
+  transform: rotate(180deg);
+  position: absolute;
+  left: 50%;
+  top: 15%;
+}
+
 .labels div {
   position:absolute;
   color:white;
