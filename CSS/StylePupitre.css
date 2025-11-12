@@ -65,6 +65,7 @@ main {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   background-color: #000000;
+  border:5px solid #737373;
   min-width: 400px;
   min-height: 400px;
 }
@@ -152,11 +153,10 @@ main {
 
 .iv {
   position:relative;
-  width:420px;
-  height:420px;
+  width:400px;
+  height:400px;
   background:#050505;
-  border:12px solid #111;
-  box-shadow:0 0 20px #000 inset;
+  border:5px solid #737373;
 }
 
 .ticks {
