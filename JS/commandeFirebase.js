@@ -80,6 +80,19 @@ ictButton.addEventListener("click", () => {
 //3. Gestion de l'Iv
 //---------------------------------------
 
+// Récupérer le slider de vitesse
+const sliderVitesse = document.getElementById("vitesse");
+
+// Fonction d'envoi de la vitesse
+function envoyerVitesse() {
+    set(ref(db, "pupitre/vitesse"), Number(sliderVitesse.value));
+}
+
+// Envoi en temps réel lors du déplacement du slider
+sliderVitesse.addEventListener("input", () => {
+    envoyerVitesse();
+});
+
 
 
 //-------------------------------
