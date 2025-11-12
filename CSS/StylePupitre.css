@@ -63,7 +63,7 @@ main {
 }
 
 .picto1 img {
-  height: 100px;
+  height: 45px;
 }
 
 .picto1 p {
@@ -103,7 +103,7 @@ main {
 .alarme {
   color: #e8461e;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 17px;
 }
 
 .urg {
