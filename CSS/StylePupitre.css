@@ -92,13 +92,13 @@ main {
 .vert {
   font-size: 25%;
   color: green;
-  line-height: 130%;
+  line-height: 140%;
 }
 
 .jaune {
-  font-size: 40%;
+  font-size: 25%;
   color: #fdc517;
-  line-height: 130%;
+  line-height: 140%;
 }
 
 .rouge {
