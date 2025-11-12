@@ -252,8 +252,8 @@ main {
 }
 
 .jauge-contenu {
-    width: 60px;
-    height: 500px;
+    min-width: 40px;
+    min-height: 410px;
     background: linear-gradient(
         to top,
         #d9534f 8%,
@@ -269,8 +269,8 @@ main {
 }
 
 .jauge-contenu-eff {
-    width: 60px;
-    height: 500px;
+    min-width: 60px;
+    min-height: 410px;
     border: 3px solid #000;
     position: relative;
     overflow: hidden;
