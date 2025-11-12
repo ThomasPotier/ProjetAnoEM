@@ -60,6 +60,7 @@ main {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   background-color: #000000;
+  padding-left: 5%;
 }
 
 .picto1 img {
@@ -153,6 +154,8 @@ main {
   background:#050505;
   border:12px solid #111;
   box-shadow:0 0 20px #000 inset;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .ticks {

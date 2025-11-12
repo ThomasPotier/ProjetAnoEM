@@ -42,12 +42,15 @@ main {
     background-color: #003f7f;
 }
 
+/*Gestion du BS1*/
+
 .picto1 {
   display: grid;
   grid-template-columns: repeat(5, 0.1fr);
   grid-template-rows: repeat(5, 0.1fr);
   grid-column-gap: 20px;
   grid-row-gap: 0px;
+  padding-left: 5%;
 }
 
 .div1 { grid-area: 1 / 1 / 2 / 2; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
@@ -94,6 +97,15 @@ main {
     background-color: #e74c3c; /* rouge */
 }
 
+/*Gestion de l'IV*/
+
+.iv {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+
+
 
 /*Gestion de la tension ligne et effort-mètre*/
 
@@ -101,6 +113,7 @@ main {
   display: flex;
   gap: 50px;
   margin-top: 40px;
+  padding-right: 5%;
 }
 
 .tension-colonne {
