@@ -19,6 +19,8 @@ main {
     background: white;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    gap: 5%;
+    align-items: center;
 }
 
 .back-button {
@@ -50,33 +52,34 @@ main {
   grid-template-rows: repeat(5, 0.1fr);
   grid-column-gap: 20px;
   grid-row-gap: 0px;
-  padding-left: 5%;
+  max-width: 800px;
+  max-height: 800px;
 }
 
-.div1 { grid-area: 1 / 1 / 2 / 2; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
-.div2 { grid-area: 1 / 2 / 2 / 3; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
-.div3 { grid-area: 1 / 3 / 2 / 4; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
-.div4 { grid-area: 1 / 4 / 2 / 5; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
-.div5 { grid-area: 1 / 5 / 2 / 6; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
-.div6 { grid-area: 2 / 1 / 3 / 3; height: 75px; width: 150px;}
-.div7 { grid-area: 2 / 3 / 3 / 4; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
-.div8 { grid-area: 2 / 4 / 3 / 5; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
-.div9 { grid-area: 2 / 5 / 3 / 6; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
-.div10 { grid-area: 3 / 1 / 4 / 2; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
-.div11 { grid-area: 3 / 2 / 4 / 3; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
-.div12 { grid-area: 3 / 3 / 4 / 4; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
-.div13 { grid-area: 3 / 4 / 4 / 5; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
-.div14 { grid-area: 3 / 5 / 4 / 6; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
-.div15 { grid-area: 4 / 1 / 5 / 2; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
-.div16 { grid-area: 4 / 2 / 5 / 3; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
-.div17 { grid-area: 4 / 3 / 5 / 4; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
-.div18 { grid-area: 4 / 4 / 5 / 5; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
-.div19 { grid-area: 4 / 5 / 5 / 6; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
-.div20 { grid-area: 5 / 1 / 6 / 2; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
-.div21 { grid-area: 5 / 2 / 6 / 3; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
-.div22 { grid-area: 5 / 3 / 6 / 4; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
-.div23 { grid-area: 5 / 4 / 6 / 5; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
-.div24 { grid-area: 5 / 5 / 6 / 6; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
+.div1 { grid-area: 1 / 1 / 2 / 2; display: flex; justify-content: center; align-items: center; height: 20%; width: 20%;}
+.div2 { grid-area: 1 / 2 / 2 / 3; display: flex; justify-content: center; align-items: center; height: 20%; width: 20%;}
+.div3 { grid-area: 1 / 3 / 2 / 4; display: flex; justify-content: center; align-items: center; height: 20%; width: 20%;}
+.div4 { grid-area: 1 / 4 / 2 / 5; display: flex; justify-content: center; align-items: center; height: 20%; width: 20%;}
+.div5 { grid-area: 1 / 5 / 2 / 6; display: flex; justify-content: center; align-items: center; height: 20%; width: 20%;}
+.div6 { grid-area: 2 / 1 / 3 / 3; height: 20%; width: 40%;}
+.div7 { grid-area: 2 / 3 / 3 / 4; display: flex; justify-content: center; align-items: center; height: 20%; width: 20%;}
+.div8 { grid-area: 2 / 4 / 3 / 5; display: flex; justify-content: center; align-items: center; height: 20%; width: 20%;}
+.div9 { grid-area: 2 / 5 / 3 / 6; display: flex; justify-content: center; align-items: center; height: 20%; width: 20%;}
+.div10 { grid-area: 3 / 1 / 4 / 2; display: flex; justify-content: center; align-items: center; height: 20%; width: 20%;}
+.div11 { grid-area: 3 / 2 / 4 / 3; display: flex; justify-content: center; align-items: center; height: 20%; width: 20%;}
+.div12 { grid-area: 3 / 3 / 4 / 4; display: flex; justify-content: center; align-items: center; height: 20%; width: 20%;}
+.div13 { grid-area: 3 / 4 / 4 / 5; display: flex; justify-content: center; align-items: center; height: 20%; width: 20%;}
+.div14 { grid-area: 3 / 5 / 4 / 6; display: flex; justify-content: center; align-items: center; height: 20%; width: 20%;}
+.div15 { grid-area: 4 / 1 / 5 / 2; display: flex; justify-content: center; align-items: center; height: 20%; width: 20%;}
+.div16 { grid-area: 4 / 2 / 5 / 3; display: flex; justify-content: center; align-items: center; height: 20%; width: 20%;}
+.div17 { grid-area: 4 / 3 / 5 / 4; display: flex; justify-content: center; align-items: center; height: 20%; width: 20%;}
+.div18 { grid-area: 4 / 4 / 5 / 5; display: flex; justify-content: center; align-items: center; height: 20%; width: 20%;}
+.div19 { grid-area: 4 / 5 / 5 / 6; display: flex; justify-content: center; align-items: center; height: 20%; width: 20%;}
+.div20 { grid-area: 5 / 1 / 6 / 2; display: flex; justify-content: center; align-items: center; height: 20%; width: 20%;}
+.div21 { grid-area: 5 / 2 / 6 / 3; display: flex; justify-content: center; align-items: center; height: 20%; width: 20%;}
+.div22 { grid-area: 5 / 3 / 6 / 4; display: flex; justify-content: center; align-items: center; height: 20%; width: 20%;}
+.div23 { grid-area: 5 / 4 / 6 / 5; display: flex; justify-content: center; align-items: center; height: 20%; width: 20%;}
+.div24 { grid-area: 5 / 5 / 6 / 6; display: flex; justify-content: center; align-items: center; height: 20%; width: 20%;}
 
 .toggle-btn {
     font-size: 10px;
@@ -100,8 +103,7 @@ main {
 /*Gestion de l'IV*/
 
 .iv {
-  padding-left: 5%;
-  padding-right: 5%;
+
 }
 
 
@@ -113,7 +115,6 @@ main {
   display: flex;
   gap: 50px;
   margin-top: 40px;
-  padding-right: 5%;
 }
 
 .tension-colonne {
@@ -127,7 +128,7 @@ input[type="range"][orient="vertical"] {
     writing-mode: bt-lr;
     -webkit-appearance: slider-vertical;
     height: 500px;
-    margin-right: 25px;
+    margin-right: 2%;
 }
 
 .tension-boutons {
