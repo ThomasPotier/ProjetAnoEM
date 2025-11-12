@@ -111,7 +111,7 @@ main {
 
 .ict {
   font-family: DS-DIGI;
-  font-size: 150px;
+  font-size: 90px;
   color: #e8461e;
 }
 
@@ -119,8 +119,8 @@ main {
 .div2 { grid-area: 1 / 2 / 2 / 3; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
 .div3 { grid-area: 1 / 3 / 2 / 4; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
 .div4 { grid-area: 1 / 4 / 2 / 5; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
-.div5 { grid-area: 1 / 5 / 2 / 6; display: flex; justify-content: center; align-items: center; height: 75px; width: 150px;}
-.div6 { grid-area: 2 / 1 / 3 / 3; display: flex; justify-content: center; align-items: center; height: 75px; width: 300px;}
+.div5 { grid-area: 1 / 5 / 2 / 6; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
+.div6 { grid-area: 2 / 1 / 3 / 3; display: flex; justify-content: center; align-items: center; height: 75px; width: 150px;}
 .div7 { grid-area: 2 / 3 / 3 / 4; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
 .div8 { grid-area: 2 / 4 / 3 / 5; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
 .div9 { grid-area: 2 / 5 / 3 / 6; display: flex; justify-content: center; align-items: center; height: 75px; width: 75px;}
