@@ -110,12 +110,12 @@ main {
 .alarme {
   color: #e8461e;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 42%;
 }
 
 .urg {
   background-color: #e8461e;
-  font-size: 22px;
+  font-size: 75%;
   font-weight: bold;
 }
 
