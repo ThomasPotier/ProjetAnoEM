@@ -317,9 +317,9 @@ main {
 
 
 .fondEff {
-  position:relative;
-  width:120px;
-  height:500px;
+  position: relative;
+  min-width: 60px;
+  min-height: 410px;
   background: black;
   overflow:hidden;
 }
