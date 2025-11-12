@@ -84,7 +84,7 @@ onValue(ref(db, "pupitre"), (snapshot) => {
 
 // Fonction pour convertir vitesse → angle (exemple : 0 km/h → 0°, 160 km/h → 180°)
 function vitesseToAngle(vitesse) {
-    const minAngle = 0;    // angle mini
+    const minAngle = 71;    // angle mini
     const maxAngle = 180;  // angle maxi
     const maxVitesse = 160; // valeur max du slider
     return minAngle + (vitesse / maxVitesse) * (maxAngle - minAngle);
@@ -97,7 +97,7 @@ onValue(ref(db, "pupitre/vitesse"), (snapshot) => {
 
     const needle = document.getElementById("needle");
     if (needle) {
-        needle.style.transform = `rotate(71 + ${angle}deg)`;
+        needle.style.transform = `rotate(${angle}deg)`;
     }
 });
 
