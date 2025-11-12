@@ -90,7 +90,7 @@ main {
 }
 
 .vert {
-  font-size: 40%;
+  font-size: 25%;
   color: green;
   line-height: 130%;
 }
@@ -115,7 +115,7 @@ main {
 
 .urg {
   background-color: #e8461e;
-  font-size: 75%;
+  font-size: 70%;
   font-weight: bold;
 }
 
