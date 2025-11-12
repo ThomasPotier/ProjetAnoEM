@@ -156,8 +156,8 @@ main {
 
 .iv {
   position:relative;
-  width:400px;
-  height:400px;
+  min-width:400px;
+  min-height:400px;
   background:#050505;
   border:5px solid #737373;
 }
