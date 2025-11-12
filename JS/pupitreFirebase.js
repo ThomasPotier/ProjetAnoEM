@@ -97,7 +97,7 @@ onValue(ref(db, "pupitre/vitesse"), (snapshot) => {
 
     const needle = document.getElementById("needle");
     if (needle) {
-        needle.style.transform = `rotate(${angle}deg)`;
+        needle.style.transform = `rotate(71 + ${angle}deg)`;
     }
 });
 
