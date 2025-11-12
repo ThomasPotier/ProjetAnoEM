@@ -125,30 +125,27 @@ main {
   color: #e8461e;
 }
 
-.div1 { grid-area: 1 / 1 / 2 / 2; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-width: 40px; min-height: 40px;}
-.div2 { grid-area: 1 / 2 / 2 / 3; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-width: 40px; min-height: 40px;}
-.div3 { grid-area: 1 / 3 / 2 / 4; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-width: 40px; min-height: 40px;}
-.div4 { grid-area: 1 / 4 / 2 / 5; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-width: 40px; min-height: 40px;}
-.div5 { grid-area: 1 / 5 / 2 / 6; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-width: 40px; min-height: 40px;}
-.div6 { grid-area: 2 / 1 / 3 / 3; display: flex; justify-content: center; align-items: center; height: 100%; width: 200%; min-width: 40px; min-height: 40px;}
-.div7 { grid-area: 2 / 3 / 3 / 4; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-width: 40px; min-height: 40px;}
-.div8 { grid-area: 2 / 4 / 3 / 5; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-width: 40px; min-height: 40px;}
-.div9 { grid-area: 2 / 5 / 3 / 6; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-width: 40px; min-height: 40px;}
-.div10 { grid-area: 3 / 1 / 4 / 2; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-width: 40px; min-height: 40px;}
-.div11 { grid-area: 3 / 2 / 4 / 3; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-width: 40px; min-height: 40px;}
-.div12 { grid-area: 3 / 3 / 4 / 4; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-width: 40px; min-height: 40px;}
-.div13 { grid-area: 3 / 4 / 4 / 5; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-width: 40px; min-height: 40px;}
-.div14 { grid-area: 3 / 5 / 4 / 6; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-width: 40px; min-height: 40px;}
-.div15 { grid-area: 4 / 1 / 5 / 2; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-width: 40px; min-height: 40px;}
-.div16 { grid-area: 4 / 2 / 5 / 3; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-width: 40px; min-height: 40px;}
-.div17 { grid-area: 4 / 3 / 5 / 4; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-width: 40px; min-height: 40px;}
-.div18 { grid-area: 4 / 4 / 5 / 5; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-width: 40px; min-height: 40px;}
-.div19 { grid-area: 4 / 5 / 5 / 6; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-width: 40px; min-height: 40px;}
-.div20 { grid-area: 5 / 1 / 6 / 2; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-width: 40px; min-height: 40px; background-color: #e8461e;}
-.div21 { grid-area: 5 / 2 / 6 / 3; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-width: 40px; min-height: 40px; background-color: #e8461e;}
-.div22 { grid-area: 5 / 3 / 6 / 4; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-width: 40px; min-height: 40px; background-color: #e8461e;}
-.div23 { grid-area: 5 / 4 / 6 / 5; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-width: 40px; min-height: 40px;}
-.div24 { grid-area: 5 / 5 / 6 / 6; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-width: 40px; min-height: 40px;}
+.div1 { grid-area: 1 / 1 / 2 / 2; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-height: 40px; min-width: 40px;}
+.div2 { grid-area: 1 / 2 / 2 / 3; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-height: 40px; min-width: 40px;}
+.div3 { grid-area: 1 / 3 / 2 / 4; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-height: 40px; min-width: 40px;}
+.div4 { grid-area: 1 / 4 / 2 / 5; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-height: 40px; min-width: 40px;}
+.div5 { grid-area: 1 / 5 / 2 / 6; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-height: 40px; min-width: 40px;}
+.div6 { grid-area: 2 / 1 / 3 / 3; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-height: 40px; min-width: 80px;}
+.div7 { grid-area: 2 / 3 / 3 / 4; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-height: 40px; min-width: 40px;}
+.div8 { grid-area: 2 / 4 / 3 / 5; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-height: 40px; min-width: 40px;}
+.div9 { grid-area: 2 / 5 / 3 / 6; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-height: 40px; min-width: 40px;}
+.div10 { grid-area: 3 / 1 / 4 / 2; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-height: 40px; min-width: 40px;}
+.div11 { grid-area: 3 / 2 / 4 / 3; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-height: 40px; min-width: 40px;}
+.div12 { grid-area: 3 / 3 / 4 / 4; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-height: 40px; min-width: 40px;}
+.div13 { grid-area: 3 / 4 / 4 / 5; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-height: 40px; min-width: 40px;}
+.div14 { grid-area: 3 / 5 / 4 / 6; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-height: 40px; min-width: 40px;}
+.div15 { grid-area: 4 / 1 / 5 / 2; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-height: 40px; min-width: 40px;}
+.div16 { grid-area: 4 / 2 / 5 / 3; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-height: 40px; min-width: 40px;}
+.div20 { grid-area: 5 / 1 / 6 / 2; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-height: 40px; min-width: 40px; background-color: #e8461e;}
+.div21 { grid-area: 5 / 2 / 6 / 3; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-height: 40px; min-width: 40px; background-color: #e8461e;}
+.div22 { grid-area: 5 / 3 / 6 / 4; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-height: 40px; min-width: 40px; background-color: #e8461e;}
+.div23 { grid-area: 5 / 4 / 6 / 5; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-height: 40px; min-width: 40px;}
+.div24 { grid-area: 5 / 5 / 6 / 6; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; min-height: 40px; min-width: 40px;}
 
 
 /*Gestion de l'IV*/
