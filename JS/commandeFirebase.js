@@ -80,34 +80,15 @@ ictButton.addEventListener("click", () => {
 //3. Gestion de l'Iv
 //---------------------------------------
 
+const vitesseRef = ref(db, "pupitre/vitesse");
+
+// Slider
 const vitesseSlider = document.getElementById("vitesse");
-if (!vitesseSlider) {
-  console.warn("CommandeFirebase: #vitesse introuvable.");
-} else {
-  const vitesseRef = ref(db, "pupitre/vitesse");
 
-  // Optionnel : envoi 'throttle' (pour limiter les écritures)
-  let lastSent = 0;
-  const THROTTLE_MS = 50; // ajuster si besoin
-
-  vitesseSlider.addEventListener("input", (e) => {
-    const now = Date.now();
-    const val = Number(e.target.value);
-
-    // Exemple de normalisation : s'assurer que la valeur est bien dans [0,100]
-    const value = Math.max(0, Math.min(100, val));
-
-    if (now - lastSent > THROTTLE_MS) {
-      set(vitesseRef, value).catch(err => console.error("Erreur écriture Firebase:", err));
-      lastSent = now;
-    } else {
-      // si l'on veut, on peut bufferiser le dernier envoi (non implémenté ici)
-    }
-  });
-
-  // Envoi initial (au chargement) pour synchroniser
-  vitesseSlider.dispatchEvent(new Event('input'));
-}
+vitesseSlider.addEventListener("input", () => {
+  const valeur = Number(vitesseSlider.value);
+  set(vitesseRef, valeur);
+});
 
 
 //-------------------------------

@@ -82,56 +82,22 @@ onValue(ref(db, "pupitre"), (snapshot) => {
 //Gestion de l'iv
 //***************************
 
+const vitesseRef = ref(db, "pupitre/vitesse");
+
+// Élément de l’aiguille
 const needle = document.getElementById("needle");
-if (!needle) {
-  console.warn("PupitreFirebase: #needle introuvable.");
-} else {
-  const vitesseRef = ref(db, "pupitre/vitesse");
 
-  // Paramètres de mapping (ajuste selon ton cadran)
-  const V_MIN = 0;    // valeur slider minimale
-  const V_MAX = 160;  // valeur slider maximale
-  const ANGLE_MIN = -90; // angle correspondant à V_MIN (en degrés)
-  const ANGLE_MAX = 90;  // angle correspondant à V_MAX (en degrés)
+// Écoute des changements de vitesse
+onValue(vitesseRef, (snapshot) => {
+  const vitesse = snapshot.val() ?? 0;
 
-  // Fonction de conversion valeur -> angle
-  function valueToAngle(v) {
-    const t = (v - V_MIN) / (V_MAX - V_MIN);
-    return ANGLE_MIN + t * (ANGLE_MAX - ANGLE_MIN);
-  }
+  // Conversion simple : 0 → -90°, 100 → +90°
+  const angle = (vitesse / 100) * 180 - 90;
+  needle.style.transform = `rotate(${angle}deg)`;
+});
 
-  // Optionnel : smoothing (fausse inertie) — garde la valeur précédente pour interpolation
-  let currentAngle = null;
-  let targetAngle = null;
-  const SMOOTHING = 0.15; // 0 = pas de smoothing, 1 = très lent
 
-  // Animation frame loop pour smoothing fluide
-  function animate() {
-    if (targetAngle !== null) {
-      if (currentAngle === null) currentAngle = targetAngle;
-      currentAngle = currentAngle + (targetAngle - currentAngle) * SMOOTHING;
-      needle.style.transform = `rotate(${currentAngle}deg)`;
-    }
-    requestAnimationFrame(animate);
-  }
-  requestAnimationFrame(animate);
 
-  // Lecture en temps réel
-  onValue(vitesseRef, (snapshot) => {
-    const v = snapshot.val();
-    if (v == null) return;
-    const numeric = Number(v);
-    if (Number.isNaN(numeric)) return;
-
-    const angle = valueToAngle(numeric);
-    targetAngle = angle;
-
-    // Si tu veux apply direct (sans smoothing) :
-    // needle.style.transform = `rotate(${angle}deg)`;
-  }, (err) => {
-    console.error("PupitreFirebase - onValue error:", err);
-  });
-}
 
     //Gestion de la tension Ligne
 
