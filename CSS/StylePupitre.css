@@ -70,7 +70,7 @@ main {
 }
 
 .picto1 img {
-  height: 45px;
+  height: 50%;
 }
 
 .picto1 p {
@@ -78,9 +78,9 @@ main {
 }
 
 .blanc {
-  font-size: 10px;
+  font-size: 40%;
   color: white;
-  line-height: 13px;
+  line-height: 130%;
 }
 
 .pointblanc {
@@ -90,21 +90,21 @@ main {
 }
 
 .vert {
-  font-size: 10px;
+  font-size: 40%;
   color: green;
-  line-height: 13px;
+  line-height: 130%;
 }
 
 .jaune {
-  font-size: 10px;
+  font-size: 40%;
   color: #fdc517;
-  line-height: 13px;
+  line-height: 130%;
 }
 
 .rouge {
   color: #e8461e;
-  font-size: 10px;
-  line-height: 13px;
+  font-size: 40%;
+  line-height: 130%;
 }
 
 .alarme {
