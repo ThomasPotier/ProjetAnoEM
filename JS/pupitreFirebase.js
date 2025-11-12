@@ -82,20 +82,6 @@ onValue(ref(db, "pupitre"), (snapshot) => {
 //Gestion de l'iv
 //***************************
 
-const vitesseRef = ref(db, "pupitre/vitesse");
-
-// Élément de l’aiguille
-const needle = document.getElementById("needle");
-
-// Écoute des changements de vitesse
-onValue(vitesseRef, (snapshot) => {
-  const vitesse = snapshot.val() ?? 0;
-
-  // Conversion simple : 0 → -90°, 100 → +90°
-  const angle = (vitesse / 100) * 180 - 90;
-  needle.style.transform = `rotate(${angle}deg)`;
-});
-
 
 
 

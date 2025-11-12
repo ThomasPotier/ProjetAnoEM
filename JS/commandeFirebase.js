@@ -80,15 +80,6 @@ ictButton.addEventListener("click", () => {
 //3. Gestion de l'Iv
 //---------------------------------------
 
-const vitesseRef = ref(db, "pupitre/vitesse");
-
-// Slider
-const vitesseSlider = document.getElementById("vitesse");
-
-vitesseSlider.addEventListener("input", () => {
-  const valeur = Number(vitesseSlider.value);
-  set(vitesseRef, valeur);
-});
 
 
 //-------------------------------
