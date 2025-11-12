@@ -91,32 +91,32 @@ main {
 }
 
 .vert {
-  font-size: 25%;
+  font-size: 60%;
   color: green;
   line-height: 140%;
 }
 
 .jaune {
-  font-size: 25%;
+  font-size: 60%;
   color: #fdc517;
   line-height: 140%;
 }
 
 .rouge {
   color: #e8461e;
-  font-size: 40%;
+  font-size: 70%;
   line-height: 130%;
 }
 
 .alarme {
   color: #e8461e;
   font-weight: bold;
-  font-size: 42%;
+  font-size: 80%;
 }
 
 .urg {
   background-color: #e8461e;
-  font-size: 70%;
+  font-size: 100%;
   font-weight: bold;
 }
 
