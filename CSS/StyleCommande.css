@@ -44,8 +44,8 @@ main {
 
 .picto1 {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 0.1fr);
+  grid-template-rows: repeat(5, 0.1fr);
   grid-column-gap: 20px;
   grid-row-gap: 0px;
 }
